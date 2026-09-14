@@ -1,0 +1,52 @@
+name: Build profile visuals
+
+on:
+  schedule:
+    - cron: "17 0 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/profile-assets.yml"
+      - ".github/scripts/generate_profile_metrics.py"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Check out profile repository
+        uses: actions/checkout@v4
+
+      - name: Generate self-hosted GitHub metrics
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python .github/scripts/generate_profile_metrics.py \
+            --username adarsh-pathak-2006 \
+            --output /tmp/profile-dist
+
+      - name: Generate contribution snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: adarsh-pathak-2006
+          outputs: |
+            /tmp/profile-dist/github-contribution-grid-snake.svg
+            /tmp/profile-dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      - name: Publish generated visuals to output branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan output
+          git rm -rf .
+          cp -R /tmp/profile-dist/. .
+          touch .nojekyll
+          git add .
+          git commit -m "chore: refresh profile visuals"
+          git push --force origin output

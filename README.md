@@ -133,23 +133,30 @@ flowchart LR
 ## `05` / GitHub signal
 
 <div align="center">
-  <img height="175" src="https://github-readme-stats.vercel.app/api?username=adarsh-pathak-2006&show_icons=true&rank_icon=github&hide_border=true&bg_color=0D1117&title_color=22D3EE&text_color=CBD5E1&icon_color=A78BFA" alt="Adarsh's GitHub statistics" />
-  <img height="175" src="https://streak-stats.demolab.com?user=adarsh-pathak-2006&hide_border=true&background=0D1117&ring=22D3EE&fire=A78BFA&currStreakLabel=22D3EE&sideLabels=CBD5E1&currStreakNum=F8FAFC&sideNums=F8FAFC&dates=64748B" alt="Adarsh's contribution streak" />
+  <img width="96%" src="https://raw.githubusercontent.com/adarsh-pathak-2006/adarsh-pathak-2006/output/profile-overview.svg" alt="Self-hosted GitHub engineering overview" />
 </div>
 
-<div align="center">
-  <img width="96%" src="https://github-readme-activity-graph.vercel.app/graph?username=adarsh-pathak-2006&bg_color=0D1117&color=CBD5E1&line=22D3EE&point=A78BFA&area=true&hide_border=true" alt="Adarsh's GitHub activity graph" />
-</div>
+<br />
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=adarsh-pathak-2006&theme=algolia&no-frame=true&no-bg=true&margin-w=8&column=6" alt="GitHub trophies" />
+  <img width="96%" src="https://raw.githubusercontent.com/adarsh-pathak-2006/adarsh-pathak-2006/output/profile-activity.svg" alt="Self-hosted contribution activity and streaks" />
 </div>
+
+<br />
+
+<div align="center">
+  <img width="96%" src="./assets/recruiter-signal.svg" alt="Recruiter-verifiable engineering strengths" />
+</div>
+
+<br />
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/adarsh-pathak-2006/adarsh-pathak-2006/output/github-contribution-grid-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/adarsh-pathak-2006/adarsh-pathak-2006/output/github-contribution-grid-snake.svg" />
   <img alt="Animated contribution snake" src="https://raw.githubusercontent.com/adarsh-pathak-2006/adarsh-pathak-2006/output/github-contribution-grid-snake.svg" />
 </picture>
+
+<sub>GitHub metrics and contribution visuals are generated inside this repository and refreshed every day—no fragile public stats-card services.</sub>
 
 ---
 
